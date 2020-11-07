@@ -30,7 +30,7 @@ class _SettingState extends State<Setting> {
                           children: [
                             Padding(
                               padding: EdgeInsets.only(bottom: 4, top: 10),
-                              child: dynamicText("Location sharing", fontWeight: FontWeight.w500),
+                              child: dynamicText("Location sharing", fontWeight: FontWeight.w600),
                             ),
                             Container(
                               width: 220,
@@ -69,7 +69,7 @@ class _SettingState extends State<Setting> {
                           children: [
                             Padding(
                               padding: EdgeInsets.only(bottom: 4, top: 10),
-                              child: dynamicText("Notification", fontWeight: FontWeight.w500),
+                              child: dynamicText("Notification", fontWeight: FontWeight.w600),
                             ),
                             Container(
                               width: 220,
@@ -106,7 +106,7 @@ class _SettingState extends State<Setting> {
                           children: [
                             Padding(
                               padding: EdgeInsets.only(bottom: 4, top: 10),
-                              child: dynamicText("Show security notifications", fontWeight: FontWeight.w500),
+                              child: dynamicText("Show security notifications", fontWeight: FontWeight.w600),
                             ),
                             Container(
                               width: 220,
@@ -143,7 +143,7 @@ class _SettingState extends State<Setting> {
                           children: [
                             Padding(
                               padding: EdgeInsets.only(bottom: 4, top: 10),
-                              child: dynamicText("Timezone", fontWeight: FontWeight.w500),
+                              child: dynamicText("Timezone", fontWeight: FontWeight.w600),
                             ),
                             Container(
                               width: 220,

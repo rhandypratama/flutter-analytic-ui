@@ -3,19 +3,20 @@ import 'package:flutter/material.dart';
 import 'package:analytic/utils/constant.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class CustomInputField extends StatelessWidget {
+class CustomSearchField extends StatelessWidget {
   final String label;
   final IconData prefixIcon;
-  final bool obscureText;
-
-  const CustomInputField({@required this.label, @required this.prefixIcon, this.obscureText = false})
-  : assert(label != null),
-  assert(prefixIcon != null);
+  final IconData suffixIcon;
+  
+  const CustomSearchField({@required this.label, this.prefixIcon, this.suffixIcon})
+  : assert(label != null);
 
   @override
   Widget build(BuildContext context) {
     return TextField(
       decoration: InputDecoration(
+        filled: true,
+        fillColor: Colors.white,
         contentPadding: const EdgeInsets.all(kPaddingM),
         focusedBorder: OutlineInputBorder(
           borderSide: BorderSide(
@@ -41,8 +42,11 @@ class CustomInputField extends StatelessWidget {
           prefixIcon,
           color: kBlack.withOpacity(0.5),
         ),
+        suffixIcon: Icon(
+          suffixIcon,
+          color: kBlack.withOpacity(0.5),
+        ),
       ),
-      // obscureText: obscureText,
     );
   }
 }

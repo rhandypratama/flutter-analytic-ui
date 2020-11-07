@@ -1,5 +1,7 @@
-import 'package:analytic/utils/constant.dart';
 import 'package:flutter/material.dart';
+import 'package:analytic/setting/screen/term.dart';
+import 'package:analytic/setting/screen/help.dart';
+import 'package:analytic/utils/constant.dart';
 import 'package:analytic/setting/screen/setting.dart';
 import 'package:analytic/utils/widget-model.dart';
 
@@ -86,8 +88,8 @@ class _OptionState extends State<Option> {
           body: TabBarView(
             children: [
               Setting(),
-              Container(),
-              Container(),
+              Help(),
+              Term(),
               Container(),
               
             ]
