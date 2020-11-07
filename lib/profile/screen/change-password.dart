@@ -1,3 +1,4 @@
+import 'package:analytic/utils/custom-text-field.dart';
 import 'package:flutter/material.dart';
 import 'package:analytic/utils/constant.dart';
 import 'package:analytic/utils/widget-model.dart';
@@ -59,184 +60,57 @@ class _ChangePasswordState extends State<ChangePassword> {
                   // fit: BoxFit.fitWidth,
                 ),
               ),
-              defaultCard(
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(bottom: 6),
-                      child: dynamicText("Profile", fontWeight: FontWeight.w600),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(bottom: 30),
-                      child: dynamicText("Some info may be visible to other people using service", fontSize: 12, color: Colors.black45),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.only(bottom: 4),
-                              child: dynamicText("PHOTO", fontSize: 12),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(bottom: 0),
-                              child: dynamicText("Add photo to personalized your account", fontSize: 12, color: Colors.black45),
-                            ),
-                          ],
-                        ),
-                        CircleAvatar(
-                          backgroundColor: kLightBlue,
-                          child: dynamicText("M", color: kWhite),
-                        )
-                      ],
-                    ),
-                    Divider(height: 30),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.only(bottom: 4),
-                              child: dynamicText("NAME", fontSize: 12),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(bottom: 0),
-                              child: dynamicText("Lorem Ipsum", fontSize: 14, fontWeight: FontWeight.w600),
-                            ),
-                          ],
-                        ),
-                        Icon(Icons.arrow_forward_ios_outlined, color: Colors.black45, size: 16)
-                      ],
-                    ),
-                    Divider(height: 30),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.only(bottom: 4),
-                              child: dynamicText("BIRTHDAY", fontSize: 12),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(bottom: 0),
-                              child: dynamicText("July 22, 1999", fontSize: 14, fontWeight: FontWeight.w600),
-                            ),
-                          ],
-                        ),
-                        Icon(Icons.arrow_forward_ios_outlined, color: Colors.black45, size: 16)
-                      ],
-                    ),
-                    Divider(height: 30),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.only(bottom: 4),
-                              child: dynamicText("GENDER", fontSize: 12),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(bottom: 0),
-                              child: dynamicText("Male", fontSize: 14, fontWeight: FontWeight.w600),
-                            ),
-                          ],
-                        ),
-                        Icon(Icons.arrow_forward_ios_outlined, color: Colors.black45, size: 16)
-                      ],
-                    ),
-                    Divider(height: 30),
-                    GestureDetector(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.only(bottom: 4),
-                                child: dynamicText("PASSWORD", fontSize: 12),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(bottom: 0),
-                                child: dynamicText("**************", fontSize: 14, fontWeight: FontWeight.w600),
-                              ),
-                            ],
-                          ),
-                          Icon(Icons.arrow_forward_ios_outlined, color: Colors.black45, size: 16)
-                        ],
-                      ),
-                      onTap: () {
-                        
-                      },
-                    ),
-                    SizedBox(height: 4)
-                    
-                  ],
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 20),
+                child: dynamicText(
+                  "Change Password",
+                  fontWeight: FontWeight.w600,
+                  fontSize: 24
+                )
+              ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Padding(
+                  padding: EdgeInsets.symmetric(vertical: 10, horizontal: 14),
+                  child: dynamicText(
+                    "Create strong password to your account",
+                    fontWeight: FontWeight.w600
+                  )
                 ),
               ),
-
-              defaultCard(
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(bottom: 30),
-                      child: dynamicText("Contact Info", fontWeight: FontWeight.w600),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.only(bottom: 4),
-                              child: dynamicText("EMAIL", fontSize: 12),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(bottom: 0),
-                              child: dynamicText("lorem_ipsum@gmail.com", fontSize: 14, fontWeight: FontWeight.w600),
-                            ),
-                          ],
-                        ),
-                        Icon(Icons.arrow_forward_ios_outlined, color: Colors.black45, size: 16)
-                      ],
-                    ),
-                    Divider(height: 30),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.only(bottom: 4),
-                              child: dynamicText("PHONE", fontSize: 12),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(bottom: 0),
-                              child: dynamicText("XXXX XXXX X381", fontSize: 14, fontWeight: FontWeight.w600),
-                            ),
-                          ],
-                        ),
-                        Icon(Icons.arrow_forward_ios_outlined, color: Colors.black45, size: 16)
-                      ],
-                    ),
-                    
-                    SizedBox(height: 4)
-                    
-                  ],
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 0, horizontal: 14),
+                child: dynamicText(
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+                  fontSize: 12
+                )
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(14, 20, 14, 20),
+                child: CustomTextField(
+                  label: "Create Password",
+                  prefixIcon: Icons.lock_outline,
+                  suffixIcon: Icons.remove_red_eye_outlined,
+                )
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(14, 0, 14, 20),
+                child: CustomTextField(
+                  label: "Confirm",
+                  prefixIcon: Icons.lock_outline,
+                  suffixIcon: Icons.remove_red_eye_outlined,
+                  helperLabel: "At least 8 characters",
+                )
+              ),
+              Align(
+                alignment: Alignment.centerRight,
+                child: Padding(
+                  padding: EdgeInsets.fromLTRB(14, 0, 14, 20),
+                  child: defaultRaisedButton("Save", () {})
                 ),
               ),
+              
+              
 
             ],
           ),

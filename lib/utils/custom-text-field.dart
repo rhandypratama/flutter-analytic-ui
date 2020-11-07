@@ -3,12 +3,13 @@ import 'package:flutter/foundation.dart';
 import 'package:analytic/utils/constant.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class CustomSearchField extends StatelessWidget {
+class CustomTextField extends StatelessWidget {
   final String label;
   final IconData prefixIcon;
   final IconData suffixIcon;
+  final String helperLabel;
   
-  const CustomSearchField({@required this.label, this.prefixIcon, this.suffixIcon})
+  const CustomTextField({@required this.label, this.prefixIcon, this.suffixIcon, this.helperLabel})
   : assert(label != null);
 
   @override
@@ -46,6 +47,7 @@ class CustomSearchField extends StatelessWidget {
           suffixIcon,
           color: kBlack.withOpacity(0.5),
         ),
+        helperText: helperLabel
       ),
     );
   }
