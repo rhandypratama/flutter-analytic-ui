@@ -89,6 +89,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                 padding: EdgeInsets.fromLTRB(14, 20, 14, 20),
                 child: CustomTextField(
                   label: "Create Password",
+                  obsecureText: true,
                   prefixIcon: Icons.lock_outline,
                   suffixIcon: Icons.remove_red_eye_outlined,
                 )
@@ -97,6 +98,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                 padding: EdgeInsets.fromLTRB(14, 0, 14, 20),
                 child: CustomTextField(
                   label: "Confirm",
+                  obsecureText: true,
                   prefixIcon: Icons.lock_outline,
                   suffixIcon: Icons.remove_red_eye_outlined,
                   helperLabel: "At least 8 characters",

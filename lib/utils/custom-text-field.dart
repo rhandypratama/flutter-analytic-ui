@@ -8,13 +8,15 @@ class CustomTextField extends StatelessWidget {
   final IconData prefixIcon;
   final IconData suffixIcon;
   final String helperLabel;
+  final bool obsecureText;
   
-  const CustomTextField({@required this.label, this.prefixIcon, this.suffixIcon, this.helperLabel})
+  const CustomTextField({@required this.label, this.prefixIcon, this.suffixIcon, this.helperLabel, @required this.obsecureText})
   : assert(label != null);
 
   @override
   Widget build(BuildContext context) {
     return TextField(
+      obscureText: obsecureText,
       decoration: InputDecoration(
         filled: true,
         fillColor: Colors.white,
@@ -47,7 +49,7 @@ class CustomTextField extends StatelessWidget {
           suffixIcon,
           color: kBlack.withOpacity(0.5),
         ),
-        helperText: helperLabel
+        helperText: helperLabel,
       ),
     );
   }
