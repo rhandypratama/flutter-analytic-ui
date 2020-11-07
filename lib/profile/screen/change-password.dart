@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:analytic/profile/screen/change-password.dart';
 import 'package:analytic/utils/constant.dart';
 import 'package:analytic/utils/widget-model.dart';
 
-class Profile extends StatefulWidget {
+class ChangePassword extends StatefulWidget {
   @override
-  _ProfileState createState() => _ProfileState();
+  _ChangePasswordState createState() => _ChangePasswordState();
 }
 
-class _ProfileState extends State<Profile> {
+class _ChangePasswordState extends State<ChangePassword> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,25 +35,12 @@ class _ProfileState extends State<Profile> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  dynamicText("My Account", fontWeight: FontWeight.w600),
+                  dynamicText("Lorem ipsum's account", fontWeight: FontWeight.w600),
                   // dynamicText("Data all of your notifications", fontSize: 12, color: Colors.black45),
                 ],
               ),
             ),
-            actions: [
-              Padding(
-                padding: EdgeInsets.only(right: 16, top: 10),
-                child: GestureDetector(
-                  child: CircleAvatar(
-                    backgroundColor: kLightBlue,
-                    child: Icon(
-                      Icons.person_outline_outlined, color: kWhite, size: 24,)),
-                  onTap: () {
-                    
-                  },
-                ),
-              )
-            ],
+            
           ),
         ),
       ),
@@ -66,6 +52,13 @@ class _ProfileState extends State<Profile> {
           padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
           child: Column(
             children: [
+              Center(
+                child: Image.asset(
+                  "assets/images/security.jpg",
+                  height: 200,
+                  // fit: BoxFit.fitWidth,
+                ),
+              ),
               defaultCard(
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -161,29 +154,29 @@ class _ProfileState extends State<Profile> {
                       ],
                     ),
                     Divider(height: 30),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.only(bottom: 4),
-                              child: dynamicText("PASSWORD", fontSize: 12),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(bottom: 0),
-                              child: dynamicText("**************", fontSize: 14, fontWeight: FontWeight.w600),
-                            ),
-                          ],
-                        ),
-                        InkWell(
-                          onTap: () {
-                            navigationManager(context, ChangePassword(), isPushReplaced: false);
-                          },
-                          child: Icon(Icons.arrow_forward_ios_outlined, color: Colors.black45, size: 16)
-                        )
-                      ],
+                    GestureDetector(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.only(bottom: 4),
+                                child: dynamicText("PASSWORD", fontSize: 12),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.only(bottom: 0),
+                                child: dynamicText("**************", fontSize: 14, fontWeight: FontWeight.w600),
+                              ),
+                            ],
+                          ),
+                          Icon(Icons.arrow_forward_ios_outlined, color: Colors.black45, size: 16)
+                        ],
+                      ),
+                      onTap: () {
+                        
+                      },
                     ),
                     SizedBox(height: 4)
                     

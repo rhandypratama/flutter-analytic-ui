@@ -30,6 +30,45 @@ class _SettingState extends State<Setting> {
                           children: [
                             Padding(
                               padding: EdgeInsets.only(bottom: 4, top: 10),
+                              child: dynamicText("Payment method", fontWeight: FontWeight.w600),
+                            ),
+                            Container(
+                              width: 220,
+                              padding: EdgeInsets.only(bottom: 10),
+                              child: dynamicText("Can facilitate in all payments", fontSize: 12, color: Colors.black45),
+                            ),
+                          ],
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 10, bottom: 10),
+                          child: CircleAvatar(
+                            backgroundColor: Colors.red[600],
+                            child: Icon(Icons.payment, color: kWhite, size: 30,),
+                            radius: 24,
+                          ),
+                        )
+                      ],
+                    ),
+                    Divider(height: 20),
+                    Padding(
+                      padding: EdgeInsets.only(bottom: 8),
+                      child: dynamicText("Manage payment method", fontWeight: FontWeight.w600, color: Colors.blueAccent, fontSize: 13)
+                    )
+                  ],
+                ),
+              ),
+              defaultCard(
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.only(bottom: 4, top: 10),
                               child: dynamicText("Location sharing", fontWeight: FontWeight.w600),
                             ),
                             Container(

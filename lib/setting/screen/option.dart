@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:analytic/setting/screen/term.dart';
+import 'package:flutter/material.dart';
+import 'package:analytic/setting/screen/privacy.dart';
 import 'package:analytic/setting/screen/help.dart';
 import 'package:analytic/utils/constant.dart';
 import 'package:analytic/setting/screen/setting.dart';
@@ -24,11 +25,6 @@ class _OptionState extends State<Option> {
                 backgroundColor: Colors.white,
                 elevation: 0,
                 automaticallyImplyLeading: false,
-                leadingWidth: 46,
-                leading: Padding(
-                  padding: const EdgeInsets.only(left: 14.0, top: 0.0),
-                  child: Icon(Icons.album_outlined, color: kLightBlue, size: 36),
-                ),
                 title: Padding(
                   padding: EdgeInsets.only(top: 10, bottom: 10),
                   child: Column(
@@ -90,8 +86,7 @@ class _OptionState extends State<Option> {
               Setting(),
               Help(),
               Term(),
-              Container(),
-              
+              Privacy(),
             ]
           ),
           
