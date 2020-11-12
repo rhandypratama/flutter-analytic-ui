@@ -368,9 +368,44 @@ class _OverviewState extends State<Overview> {
                         //   child: dynamicText("Improve your score by following the recomendations below. Recomended because you're not targetting", fontSize: 12, color: Colors.black45),
                         // ),
                         Padding(
-                          padding: EdgeInsets.only(bottom: 10),
-                          child: dynamicText("-\$30.4", fontSize: 14, color: Colors.green, fontWeight: FontWeight.w600),
+                          padding: const EdgeInsets.symmetric(vertical: 10.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              CircularPercentIndicator(
+                                radius: 80.0,
+                                lineWidth: 10.0,
+                                animation: true,
+                                percent: 0.7,
+                                center: dynamicText("70.0%", fontSize: 14, fontWeight: FontWeight.w600),
+                                footer: dynamicText("Sales", fontSize: 14, fontWeight: FontWeight.w600),
+                                circularStrokeCap: CircularStrokeCap.round,
+                                progressColor: Colors.green,
+                              ),
+                              CircularPercentIndicator(
+                                radius: 80.0,
+                                lineWidth: 10.0,
+                                animation: true,
+                                percent: 0.4,
+                                center: dynamicText("40.0%", fontSize: 14, fontWeight: FontWeight.w600),
+                                footer: dynamicText("Purchase", fontSize: 14, fontWeight: FontWeight.w600),
+                                circularStrokeCap: CircularStrokeCap.round,
+                                progressColor: Colors.cyan,
+                              ),
+                              CircularPercentIndicator(
+                                radius: 80.0,
+                                lineWidth: 10.0,
+                                animation: true,
+                                percent: 0.1,
+                                center: dynamicText("10.0%", fontSize: 14, fontWeight: FontWeight.w600),
+                                footer: dynamicText("Order", fontSize: 14, fontWeight: FontWeight.w600),
+                                circularStrokeCap: CircularStrokeCap.round,
+                                progressColor: Colors.red,
+                              ),
+                            ],
+                          ),
                         ),
+
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [

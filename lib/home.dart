@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:analytic/campaign/screen/campaign.dart';
 import 'package:analytic/overview/screen/overview.dart';
 import 'package:analytic/setting/screen/option.dart';
 import 'package:analytic/recomendation/screen/recomendation.dart';
@@ -16,7 +17,7 @@ class _HomeState extends State<Home> {
   List<Widget> _children = [
     Overview(),
     Recomendation(),
-    Overview(),
+    Campaign(),
     Option(),
   ];
 

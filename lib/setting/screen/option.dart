@@ -1,8 +1,7 @@
-import 'package:analytic/setting/screen/term.dart';
 import 'package:flutter/material.dart';
+import 'package:analytic/setting/screen/term.dart';
 import 'package:analytic/setting/screen/privacy.dart';
 import 'package:analytic/setting/screen/help.dart';
-import 'package:analytic/utils/constant.dart';
 import 'package:analytic/setting/screen/setting.dart';
 import 'package:analytic/utils/widget-model.dart';
 
